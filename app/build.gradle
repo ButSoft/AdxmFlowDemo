@@ -1,0 +1,29 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+
+    defaultConfig {
+        applicationId "com.adxmi.android.flow"
+        minSdkVersion 7
+        targetSdkVersion 17
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-project.txt'
+        }
+    }
+}
+
+dependencies {
+    compile files('libs/AdxmiCustomizedSdk_v1.4.0_2016-01-07.jar')
+    compile files('libs/universal-image-loader-1.9.3-with-sources.jar')
+
+    compile 'com.android.support:appcompat-v7:23.0.0'
+    compile 'com.google.android.gms:play-services-gcm:8.4.0'
+ //   compile 'com.android.support:support-v4:23.0.0-alpha1'
+    //compile 'com.google.android.gms:play-services:8.4.0'
+}
